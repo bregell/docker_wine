@@ -26,4 +26,4 @@ RUN chmod +x /home/steam/winetricks
 USER steam
 RUN wineboot --init && \
 	~/winetricks -q dotnet461
-RUN wine wine64 wineboot
+RUN wine64 wineboot
