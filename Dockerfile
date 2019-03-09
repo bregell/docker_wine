@@ -1,4 +1,4 @@
-FROM bregell:docker_steamcmd
+FROM bregell/steamcmd
 MAINTAINER Johan Bregell
 
 ENV DISPLAY=
