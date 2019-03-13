@@ -24,5 +24,5 @@ RUN wget 'https://raw.githubusercontent.com/Winetricks/winetricks/master/src/win
 RUN	mv winetricks /home/root/winetricks
 RUN chmod +x /home/root/winetricks
 RUN wineboot --init && \
-	~/winetricks -q dotnet461
+	/home/root/winetricks -q dotnet461
 RUN wine64 wineboot
