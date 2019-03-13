@@ -21,9 +21,8 @@ RUN	apt-get update \
 	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/{apt,dpkg,cache,log}/
 RUN wget 'https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks'
-RUN	mv winetricks /home/steam/winetricks
-RUN chmod +x /home/steam/winetricks
-USER steam
+RUN	mv winetricks /home/root/winetricks
+RUN chmod +x /home/root/winetricks
 RUN wineboot --init && \
 	~/winetricks -q dotnet461
 RUN wine64 wineboot
