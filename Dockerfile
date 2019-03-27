@@ -1,6 +1,7 @@
 FROM bregell/steamcmd
 MAINTAINER Johan Bregell
 
+ENV WINEARCH=win64
 ENV WINEDEBUG=-all
 
 USER root
@@ -26,5 +27,5 @@ RUN chmod +x /home/root/winetricks
 RUN WINEDLLOVERRIDES="mscoree,mshtml=" wineboot --init && \
 	xvfb-run /home/root/winetricks -q vcrun2013 vcrun2017
 RUN wineboot --init && \
-	/home/root/winetricks -q dotnet461
+	/home/root/winetricks -q dotnet461 corefonts
 RUN wine64 wineboot
